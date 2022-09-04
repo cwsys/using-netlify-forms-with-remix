@@ -1,11 +1,11 @@
-import type { ActionArgs } from "@remix-run/node"
-import { redirect } from "@remix-run/node"
+import type { ActionArgs } from '@remix-run/node'
+import { redirect } from '@remix-run/node'
 
 export async function action({ request }: ActionArgs) {
   const formData = await request.formData()
   const name = formData.get('name')
   const baseUrl = request.url
-  const response = await fetch(`${baseUrl}/form`, {
+  await fetch(`${baseUrl}/form`, {
     method: "POST", 
     headers: {
       "Content-Type": "application/x-www-form-urlencoded"
