@@ -25,7 +25,7 @@ export default function Index() {
           Name: 
           <input type="text" name="name" placeholder="Name"/>
         </label>  
-        <button>Submit</button>
+        <button type="button">Submit</button>
       </form>    
      
     </div>
