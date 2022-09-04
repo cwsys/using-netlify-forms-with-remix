@@ -6,9 +6,9 @@ export async function action({ request }: ActionArgs) {
   const name = formData.get('name')
   const baseUrl = request.url
   await fetch(`${baseUrl}/form`, {
-    method: "POST", 
+    method: 'POST', 
     headers: {
-      "Content-Type": "application/x-www-form-urlencoded"
+      'Content-Type': 'application/x-www-form-urlencoded'
     },
     body: `name=${name}&form-name=contat`
   })
@@ -18,7 +18,7 @@ export async function action({ request }: ActionArgs) {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
+    <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>
       <form method="POST" action="/?index">
         <label>
           Name: 
