@@ -1,4 +1,5 @@
-import type { ActionArgs } from "@remix-run/node";
+import type { ActionArgs, redirect } from "@remix-run/node";
+import { redirect } from "@remix-run/node";
 
 export async function action({ request }: ActionArgs) {
   const formData = await request.formData()
@@ -9,16 +10,17 @@ export async function action({ request }: ActionArgs) {
     headers: {
       "Content-Type": "application/x-www-form-urlencoded"
     },
-    body: `name=${name}`
+    body: `name=${name}&form-name=contat`
   })
 
-  return null
+  return redirect(`/`)
 }
 
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <form method="POST" action="/?index">
+        <input type="hidden" name="form-name" value="contact" />
         <label>
           Name: 
           <input type="text" name="name" placeholder="Name"/>

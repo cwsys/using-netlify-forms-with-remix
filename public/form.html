@@ -7,12 +7,11 @@
 	<title>Document</title>
 </head>
 <body>
-	<form method="POST" netlify>
-		<label >
+	<form method="POST" data-netlify="true">
+		<input type="hidden" name="form-name" value="contact" />
+		<label>
 			Name:
-		<input type="text"
-		       name="name"		
-		       placeholder="Name">
+		<input type="text" name="name" placeholder="Name" />
 		</label>
 	  <button>Submit</button>
 	</form>	
