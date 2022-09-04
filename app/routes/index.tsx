@@ -20,7 +20,6 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <form method="POST" action="/?index">
-        <input type="hidden" name="form-name" value="contact" />
         <label>
           Name: 
           <input type="text" name="name" placeholder="Name"/>
