@@ -13,6 +13,7 @@ export async function action({ request }: ActionArgs) {
     body: `name=${name}&form-name=contat`
   })
 
+  
   return redirect(`/`)
 }
 
